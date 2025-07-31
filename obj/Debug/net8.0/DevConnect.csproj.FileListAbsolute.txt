@@ -1,0 +1,7 @@
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect\obj\Debug\net8.0\DevConnect.csproj.AssemblyReference.cache
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect\obj\Debug\net8.0\DevConnect.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect\obj\Debug\net8.0\DevConnect.AssemblyInfoInputs.cache
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect\obj\Debug\net8.0\DevConnect.AssemblyInfo.cs
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect\obj\Debug\net8.0\DevConnect.csproj.CoreCompileInputs.cache
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect\obj\Debug\net8.0\DevConnect.MvcApplicationPartsAssemblyInfo.cache
