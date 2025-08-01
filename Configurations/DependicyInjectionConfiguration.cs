@@ -45,9 +45,10 @@ namespace DevConnect.Configurations
             builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
             builder.Services.AddScoped<ISkillRepository, SkillRepository>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
-
+            
 
             builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ISkillService, SkillService>();
             builder.Services.AddScoped<IProjectService, ProjectService>();
@@ -75,6 +76,7 @@ namespace DevConnect.Configurations
             builder.Services.AddValidatorsFromAssemblyContaining<UpdateCommentDtoValidator>();
 
 
+            builder.Services.AddAutoMapper(typeof(MappingProfile));
         }
     }
 }

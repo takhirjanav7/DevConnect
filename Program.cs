@@ -17,26 +17,6 @@ builder.Host.UseSerilog((context, config) =>
           .WriteTo.File("Logs/log.txt", rollingInterval: RollingInterval.Day);
 });
 
-// 2. Connection string va DbContext
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-// 3. AutoMapper
-builder.Services.AddAutoMapper(typeof(MappingProfile));
-
-// 4. Repository'larni DI ga qo‘shish
-builder.Services.AddScoped<IPostRepository, PostRepository>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
-builder.Services.AddScoped<ISkillRepository, SkillRepository>();
-// kerak bo‘lsa yana qo‘shiladi: ICommentRepository va hokazo
-
-// 5. Servicelarni DI ga qo‘shish
-builder.Services.AddScoped<IPostService, PostService>();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IProjectService, ProjectService>();
-builder.Services.AddScoped<ISkillService, SkillService>();
-// kerak bo‘lsa yana qo‘shiladi: ICommentService va hokazo
 
 // 6. Controller va Swagger
 builder.Services.AddControllers();
