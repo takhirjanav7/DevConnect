@@ -1,0 +1,12 @@
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\bin\Debug\net8.0\DevConnect.DataAccess.deps.json
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\bin\Debug\net8.0\DevConnect.DataAccess.dll
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\bin\Debug\net8.0\DevConnect.DataAccess.pdb
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\DevConnect.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\DevConnect.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\DevConnect.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\DevConnect.DataAccess.AssemblyInfo.cs
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\DevConnect.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\DevConnect.DataAccess.dll
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\refint\DevConnect.DataAccess.dll
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\DevConnect.DataAccess.pdb
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\ref\DevConnect.DataAccess.dll

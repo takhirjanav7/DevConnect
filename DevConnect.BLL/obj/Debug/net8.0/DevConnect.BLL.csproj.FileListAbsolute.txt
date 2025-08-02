@@ -1,0 +1,17 @@
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\DevConnect.BLL.csproj.AssemblyReference.cache
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\DevConnect.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\DevConnect.BLL.AssemblyInfoInputs.cache
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\DevConnect.BLL.AssemblyInfo.cs
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\DevConnect.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\bin\Debug\net8.0\DevConnect.BLL.deps.json
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\bin\Debug\net8.0\DevConnect.BLL.dll
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\bin\Debug\net8.0\DevConnect.BLL.pdb
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\bin\Debug\net8.0\DevConnect.DataAccess.dll
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\bin\Debug\net8.0\DevConnect.Repositories.dll
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\bin\Debug\net8.0\DevConnect.Repositories.pdb
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\bin\Debug\net8.0\DevConnect.DataAccess.pdb
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\DevConne.817D2292.Up2Date
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\DevConnect.BLL.dll
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\refint\DevConnect.BLL.dll
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\DevConnect.BLL.pdb
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\ref\DevConnect.BLL.dll
