@@ -1,4 +1,5 @@
-﻿using DevConnect.Domain.Entities;
+﻿using DevConnect.DataAccess.Entities;
+using DevConnect.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ namespace DevConnect.DataAccess
 
 
         public DbSet<Follow> Follows { get; set; }
+        public DbSet<RefreshTokens> RefreshTokens { get; set; }
+        public DbSet<RefreshToken> refreshTokens { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }

@@ -12,4 +12,6 @@ public interface IMessageService
     Task SendMessageAsync(Guid senderId, CreateMessageDto dto);
     Task<List<GetMessageDto>> GetConversationAsync(Guid user1Id, Guid user2Id);
     Task UpdateReadStatusAsync(Guid messageId, bool isRead);
+    Task<GetMessageDto?> GetLatestMessageAsync(Guid conversationId);
+    Task<bool> HasUnreadMessagesAsync(Guid userId);
 }

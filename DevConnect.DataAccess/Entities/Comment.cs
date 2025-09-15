@@ -15,5 +15,6 @@ namespace DevConnect.Domain.Entities
         public User Author { get; set; }
         public Guid PostId { get; set; }
         public Post Post { get; set; }
+        public int LikesCount { get; set; }
     }
 }

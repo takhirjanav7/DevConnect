@@ -27,6 +27,19 @@ public class UserRepository : GenericRepository<User>, IUserRepository
         return await Context.Users.FirstOrDefaultAsync(u => u.Email == email);
     }
 
+    public async Task<User> GetByUsernameAsync(string usernameOrEmail)
+    {
+        var user = await Context.Users
+            .FirstOrDefaultAsync(u => u.Username == usernameOrEmail || u.Email == usernameOrEmail);
+
+        if(user == null)
+        {
+            throw new Exception("User not found");
+        }
+
+        return user;
+    }
+
     public async Task<List<User>> GetTopRatedUsersAsync(int count)
     {
         return await Context.Users

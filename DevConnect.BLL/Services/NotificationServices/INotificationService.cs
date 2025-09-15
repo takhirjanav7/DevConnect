@@ -12,4 +12,7 @@ public interface INotificationService
     Task SendNotificationAsync(CreateNotificationDto dto);
     Task<List<GetNotificationDto>> GetUserNotificationsAsync(Guid userId);
     Task MarkAsReadAsync(Guid notificationId);
+    Task<List<GetNotificationDto>?> GetUnreadNotificationsAsync(Guid userId);
+    Task MarkAllAsReadAsync(Guid userId);
+    Task<int> CountUnreadAsync(Guid userId);
 }

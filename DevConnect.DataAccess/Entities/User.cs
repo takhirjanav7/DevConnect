@@ -16,6 +16,8 @@ namespace DevConnect.Domain.Entities
         public string Role { get; set; } = string.Empty;
         public string? ProfileImageUrl { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime RefreshTokenExpiry { get; set; }
+       
 
 
          
@@ -30,7 +32,10 @@ namespace DevConnect.Domain.Entities
         public ICollection<Follow> Following { get; set; } = new List<Follow>();
         public ICollection<Like> Likes { get; set; } = new List<Like>();
         public ICollection<Notification> Notifications { get; set; } = new List<Notification>();
-        public object Rating { get; set; }
-        public object Count { get; set; }
+        public string RefreshToken { get; set; } = string.Empty;
+
+
+        public double Rating { get; set; }
+        public int Count { get; set; }
     }
 }

@@ -17,6 +17,7 @@ namespace DevConnect.BLL.Services.UserServices
     {
         private readonly IGenericRepository<User> Repository;
         private readonly IMapper Mapper;
+
         public UserService(IGenericRepository<User> repository, IMapper mapper)
         {
             Repository = repository;
@@ -49,5 +50,89 @@ namespace DevConnect.BLL.Services.UserServices
         public async Task DeleteAsync(Guid id) =>
             await Repository.DeleteAsync(id);
 
+        public async Task<bool> MakeUserAdminAsync(string username)
+        {
+            var user = (await Repository.GetAllAsync())
+                .FirstOrDefault(u => u.Username == username);
+
+            if (user == null)
+            {
+                return false; 
+            }
+
+            user.Role = "Admin";
+
+            await Repository.UpdateAsync(user);
+
+            return true; 
+        }
+
+        public async Task<object?> GetByEmailAsync(string email)
+        {
+            var users = await Repository.GetAllAsync();
+            var user = users.FirstOrDefault(u => u.Email == email);
+
+            if (user == null)
+                return null;
+
+            return Mapper.Map<GetUserDto>(user);
+        }
+
+        public async Task<object?> GetByUsernameAsync(string username)
+        {
+            var users = await Repository.GetAllAsync();
+            var user = users.FirstOrDefault(u => u.Username == username);
+
+            if (user == null)
+                return null;
+
+            return Mapper.Map<GetUserDto>(user);
+        }
+
+        public async Task<List<GetUserDto>?> GetUsersBySkillAsync(string skillName)
+        {
+            var users = await Repository.GetAllAsync();
+
+            var usersWithSkill = users
+                .Where(u => u.Skills != null &&
+                            u.Skills.Any(s =>
+                                string.Equals(s.Name, skillName, StringComparison.OrdinalIgnoreCase)))
+                .ToList();
+
+            return Mapper.Map<List<GetUserDto>>(usersWithSkill);
+        }
+
+        public async Task<object?> GetTopRatedUsersAsync(int count)
+        {
+            var users = await Repository.GetAllAsync();
+            var topUsers = users
+                .OrderByDescending(u => u.Rating)
+                .Take(count)
+                .ToList();
+
+            if (!topUsers.Any())
+                return null;
+
+            return Mapper.Map<List<GetUserDto>>(topUsers);
+        }
+
+        public async Task<object?> GetUsersWithProjectsAsync()
+        {
+            var users = await Repository.GetAllAsync();
+            var usersWithProjects = users
+                .Where(u => u.Projects != null && u.Projects.Any())
+                .ToList();
+
+            if (!usersWithProjects.Any())
+                return null;
+
+            return Mapper.Map<List<GetUserDto>>(usersWithProjects);
+        }
+
+        public async Task<bool> IsUsernameTakenAsync(string username)
+        {
+            var users = await Repository.GetAllAsync();
+            return users.Any(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
+        }
     }
 }

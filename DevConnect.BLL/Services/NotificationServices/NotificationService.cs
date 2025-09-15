@@ -50,4 +50,46 @@ public class NotificationService : INotificationService
         await Repository.UpdateAsync(notification);
 
     }
+
+    public async Task<List<GetNotificationDto>?> GetUnreadNotificationsAsync(Guid userId)
+    {
+        var notifications = await Repository.GetAllAsync();
+
+        var unread = notifications
+            .Where(n => n.UserId == userId && !n.IsRead)
+            .OrderByDescending(n => n.CreatedAt)
+            .ToList();
+
+        if (!unread.Any())
+            return null;
+
+        return Mapper.Map<List<GetNotificationDto>>(unread);
+    }
+
+    public async Task MarkAllAsReadAsync(Guid userId)
+    {
+        var notifications = await Repository.GetAllAsync();
+
+        var unread = notifications
+            .Where(n => n.UserId == userId && !n.IsRead)
+            .ToList();
+
+        if (!unread.Any())
+            return;
+
+        foreach (var n in unread)
+        {
+            n.IsRead = true;
+            await Repository.UpdateAsync(n); 
+        }
+    }
+
+    public async Task<int> CountUnreadAsync(Guid userId)
+    {
+        var notifications = await Repository.GetAllAsync();
+
+        return notifications
+            .Count(n => n.UserId == userId && !n.IsRead);
+    }
+
 }

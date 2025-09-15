@@ -42,6 +42,15 @@ public class FollowService : IFollowService
         return Mapper.Map<List<GetFollowDto>>(await Repository.GetFollowingAsync(userId));
     }
 
-    public async Task UnfollowAsync(Guid followerId, Guid followingId) =>
+    public async Task<bool> IsFollowingAsync(Guid followerId, Guid followingId)
+    {
+        var follows = await Repository.GetAllAsync();
+        return follows.Any(f => f.FollowerId == followerId && f.FollowingId == followingId);
+    }
+
+
+    public async Task UnfollowAsync(Guid followerId, Guid followingId)
+    {
         await Repository.DeleteAsync(followerId, followingId);
+    }
 }

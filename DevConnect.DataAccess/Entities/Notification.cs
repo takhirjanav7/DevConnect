@@ -14,4 +14,6 @@ public class Notification
     public Guid RecipientId { get; set; }
     public User Recipient { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public Guid UserId { get; set; }
+
 }

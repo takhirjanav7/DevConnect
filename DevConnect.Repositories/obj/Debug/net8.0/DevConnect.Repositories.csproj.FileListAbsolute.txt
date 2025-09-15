@@ -13,3 +13,4 @@ C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.Repositories\obj\Debug\net
 C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.Repositories\obj\Debug\net8.0\refint\DevConnect.Repositories.dll
 C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.Repositories\obj\Debug\net8.0\DevConnect.Repositories.pdb
 C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.Repositories\obj\Debug\net8.0\ref\DevConnect.Repositories.dll
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.Repositories\obj\Debug\net8.0\DevConnect.Repositories.sourcelink.json

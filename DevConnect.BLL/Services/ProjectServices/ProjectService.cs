@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DevConnect.BLL.DTOs.ProjectDTOs;
+using DevConnect.BLL.DTOs.UserDTOs;
 using DevConnect.Domain.Entities;
 using DevConnect.Repositories.Repositories;
 using System;
@@ -47,5 +48,52 @@ namespace DevConnect.BLL.Services.ProjectServices
         public async Task DeleteAsync(Guid id) =>
             await Repository.DeleteAsync(id);
 
+        public async Task<List<GetProjectDto>> GetProjectsByUserAsync(Guid userId)
+        {
+            // Barcha projectlarni olish
+            var projects = await Repository.GetAllAsync();
+
+            // Faqat userId mos keladigan projectlarni filtrlash
+            var userProjects = projects.Where(p => p.UserId == userId).ToList();
+
+            // DTO ga map qilish
+            return Mapper.Map<List<GetProjectDto>>(userProjects);
+        }
+
+        public async Task<GetProjectDto?> GetRecentProjectsAsync(DateTime fromDate)
+        {
+            var recentProject = (await Repository.GetAllAsync())
+                .Where(p => p.CreatedAt >= fromDate)
+                .OrderByDescending(p => p.CreatedAt)
+                .FirstOrDefault();
+
+            return Mapper.Map<GetProjectDto?>(recentProject);
+        }
+
+        public async Task<GetProjectWithTeamDto?> GetProjectWithTeamAsync(Guid projectId)
+        {
+            var project = await Repository.GetByIdAsync(projectId);
+            if (project == null)
+                return null;
+
+            var dto = Mapper.Map<GetProjectWithTeamDto>(project);
+            dto.TeamMembers = new List<GetUserDto>();
+
+            if (project.User != null)
+                dto.TeamMembers.Add(Mapper.Map<GetUserDto>(project.User));
+
+            return dto;
+        }
+
+        public async Task<GetProjectDto?> GetTrendingProjectsAsync()
+        {
+            // LikeCount va CommentCount bo‘yicha eng mashhur projectni topish
+            var projects = await Repository.GetAllAsync();
+            var trendingProject = projects
+                .OrderByDescending(p => p.LikeCount + p.CommentCount)
+                .FirstOrDefault();
+
+            return Mapper.Map<GetProjectDto?>(trendingProject);
+        }
     }
 }

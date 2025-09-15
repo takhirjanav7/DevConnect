@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using DevConnect.BLL.DTOs.CommentDTOs;
 using DevConnect.BLL.DTOs.PostDTOs;
 using DevConnect.Domain.Entities;
 using DevConnect.Repositories.Repositories;
@@ -47,5 +48,47 @@ namespace DevConnect.BLL.Services.PostServices
         public async Task DeleteAsync(Guid id) =>
             await Repository.DeleteAsync(id);
 
+        public async Task<IEnumerable<GetPostDto>> GetPostsByUserAsync(Guid userId)
+        {
+            var posts = await Repository.GetAllAsync();
+            var userPosts = posts.Where(p => p.UserId == userId);
+            return Mapper.Map<IEnumerable<GetPostDto>>(userPosts);
+        }
+
+        public async Task<IEnumerable<GetPostDto>> GetFeedPostsAsync(Guid userId)
+        {
+            var posts = await Repository.GetAllAsync();
+            var feedPosts = posts.Where(p => p.UserId == userId);
+            return Mapper.Map<IEnumerable<GetPostDto>>(feedPosts);
+        }
+
+        public async Task<GetPostWithCommentsDto?> GetPostsWithCommentsAsync(Guid postId)
+        {
+            var post = await Repository.GetByIdAsync(postId);
+            if (post == null)
+                return null;
+
+            var postDto = Mapper.Map<GetPostDto>(post);
+            var commentsDto = post.Comments != null
+                ? Mapper.Map<IEnumerable<GetCommentDto>>(post.Comments)
+                : Enumerable.Empty<GetCommentDto>();
+
+            return new GetPostWithCommentsDto
+            {
+                Post = postDto,
+                Comments = commentsDto
+            };
+        }
+
+        public async Task<IEnumerable<GetPostDto>> SearchPostsAsync(string keyword)
+        {
+            var posts = await Repository.GetAllAsync();
+            var filtered = posts.Where(p =>
+                (!string.IsNullOrEmpty(p.Title) && p.Title.Contains(keyword, StringComparison.OrdinalIgnoreCase)) ||
+                (!string.IsNullOrEmpty(p.Description) && p.Description.Contains(keyword, StringComparison.OrdinalIgnoreCase))
+            );
+
+            return Mapper.Map<IEnumerable<GetPostDto>>(filtered);
+        }
     }
 }

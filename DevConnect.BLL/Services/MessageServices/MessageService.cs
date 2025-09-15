@@ -39,5 +39,26 @@ namespace DevConnect.BLL.Services.MessageServices
 
         public async Task UpdateReadStatusAsync(Guid messageId, bool isRead) =>
             await Repository.UpdateReadStatusAsync(messageId, isRead);
+
+        public async Task<GetMessageDto?> GetLatestMessageAsync(Guid conversationId)
+        {
+            var messages = await Repository.GetAllAsync();
+            var latest = messages
+                .Where(m => m.SenderId == conversationId)
+                .OrderByDescending(m => m.SentAt)
+                .FirstOrDefault();
+
+            if (latest == null)
+                return null;
+
+            return Mapper.Map<GetMessageDto>(latest);
+        }
+
+
+        public async Task<bool> HasUnreadMessagesAsync(Guid userId)
+        {
+            var messages = await Repository.GetAllAsync();
+            return messages.Any(m => m.RecipientId == userId && !m.IsRead);
+        }
     }
 }

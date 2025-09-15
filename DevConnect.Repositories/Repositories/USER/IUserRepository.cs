@@ -17,5 +17,6 @@ namespace DevConnect.Repositories.Repositories.USER
         Task<List<User>> GetTopRatedUsersAsync(int count);
         Task<bool> IsUsernameTakenAsync(string username);
         Task<List<User>> GetUsersWithProjectsAsync();
+        Task<User> GetByUsernameAsync(string usernameOrEmail);
     }
 }

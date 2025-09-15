@@ -10,3 +10,6 @@ C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.
 C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\refint\DevConnect.DataAccess.dll
 C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\DevConnect.DataAccess.pdb
 C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\ref\DevConnect.DataAccess.dll
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\DevConnect.DataAccess.sourcelink.json
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\bin\Debug\net8.0\DevConnect.DataAccess.runtimeconfig.json
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.DataAccess\obj\Debug\net8.0\DevConnect.DataAccess.genruntimeconfig.cache

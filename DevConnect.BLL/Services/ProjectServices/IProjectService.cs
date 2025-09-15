@@ -5,14 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevConnect.BLL.Services.ProjectServices
+namespace DevConnect.BLL.Services.ProjectServices;
+
+public interface IProjectService
 {
-    public interface IProjectService
-    {
-        Task<List<GetProjectDto>> GetAllAsync();
-        Task<GetProjectDto> GetByIdAsync(Guid id);
-        Task CreateAsync(CreateProjectDto dto);
-        Task UpdateAsync(Guid id, UpdateProjectDto dto);
-        Task DeleteAsync(Guid id);
-    }
+    Task<List<GetProjectDto>> GetAllAsync();
+    Task<GetProjectDto> GetByIdAsync(Guid id);
+    Task CreateAsync(CreateProjectDto dto);
+    Task UpdateAsync(Guid id, UpdateProjectDto dto);
+    Task DeleteAsync(Guid id);
+    Task<List<GetProjectDto>> GetProjectsByUserAsync(Guid userId);
+    Task<GetProjectDto?> GetRecentProjectsAsync(DateTime fromDate);
+    Task<GetProjectWithTeamDto?> GetProjectWithTeamAsync(Guid projectId);
+    Task<GetProjectDto?> GetTrendingProjectsAsync();
 }

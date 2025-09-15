@@ -12,4 +12,6 @@ public interface ILikeService
     Task CreateAsync(CreateLikeDto dto);
     Task<List<GetLikeDto>> GetByPostIdAsync(Guid postId);
     Task DeleteAsync(Guid id);
+    Task<int> CountLikesByPostAsync(Guid postId);
+    Task<bool> HasUserLikedPostAsync(Guid postId, Guid userId);
 }

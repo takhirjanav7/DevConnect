@@ -48,5 +48,42 @@ namespace DevConnect.BLL.Services.SkillServices
         public async Task DeleteAsync(Guid id) =>
             await Repository.DeleteAsync(id);
 
+        public async Task<List<GetSkillDto>> GetPopularSkillsAsync(int count)
+        {
+            var skills = await Repository.GetAllAsync();
+            var popularSkills = skills
+                .OrderByDescending(s => s.Users.Count) 
+                .Take(count)
+                .ToList();
+            return Mapper.Map<List<GetSkillDto>>(popularSkills);
+        }
+
+        public async Task<GetSkillWithUsersDto?> GetSkillWithUsersAsync(string skillName)
+        {
+            var skills = await Repository.GetAllAsync();
+
+            var skill = skills
+                .FirstOrDefault(s => s.Name.Equals(skillName, StringComparison.OrdinalIgnoreCase));
+
+            if (skill == null)
+                return null;
+
+            var result = Mapper.Map<GetSkillWithUsersDto>(skill);
+            return result;
+        }
+
+
+        public async Task<bool> IsSkillLinkedToUserAsync(Guid userId, string skillName)
+        {
+            var skills = await Repository.GetAllAsync();
+
+            var isLinked = skills.Any(s =>
+                s.Name.Equals(skillName, StringComparison.OrdinalIgnoreCase) &&
+                s.Users != null &&
+                s.Users.Id == userId
+            );
+
+            return isLinked;
+        }
     }
 }

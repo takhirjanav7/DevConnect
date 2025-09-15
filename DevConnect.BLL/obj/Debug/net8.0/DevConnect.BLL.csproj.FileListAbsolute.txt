@@ -15,3 +15,4 @@ C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\DevCo
 C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\refint\DevConnect.BLL.dll
 C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\DevConnect.BLL.pdb
 C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\ref\DevConnect.BLL.dll
+C:\Users\Abdulaziz\source\repos\DevConnect\DevConnect.BLL\obj\Debug\net8.0\DevConnect.BLL.sourcelink.json

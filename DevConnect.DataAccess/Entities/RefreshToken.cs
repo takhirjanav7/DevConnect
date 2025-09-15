@@ -13,6 +13,5 @@ public class RefreshToken
     public string Token { get; set; } = string.Empty;
     public DateTime Expiration { get; set; }
     public Guid UserId { get; set; }
-    // Navigation property
     public User User { get; set; } = null!;
 }
