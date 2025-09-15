@@ -1,0 +1,1706 @@
+[
+  {
+    "ContainingType": "DevConnect.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthEndpoints\u003Eb__0_3",
+    "RelativePath": "api/auth/api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DevConnect.BLL.DTOs.LoginUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Auth"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthEndpoints\u003Eb__0_4",
+    "RelativePath": "api/auth/api/auth/refresh",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refreshToken",
+        "Type": "DevConnect.BLL.DTOs.TokenDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Auth"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthEndpoints\u003Eb__0_2",
+    "RelativePath": "api/auth/api/auth/register",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DevConnect.BLL.DTOs.RegisterUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Auth"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthEndpoints\u003Eb__0_0",
+    "RelativePath": "api/auth/api/users/{username}/make-admin",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Auth"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthEndpoints\u003Eb__0_5",
+    "RelativePath": "api/auth/logout",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DevConnect.BLL.DTOs.LogOutResultDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Auth"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.CommentEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCommentEndpoints\u003Eb__0_1",
+    "RelativePath": "api/comments/api/comments",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DevConnect.BLL.DTOs.CommentDTOs.CreateCommentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Comments"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.CommentEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCommentEndpoints\u003Eb__0_2",
+    "RelativePath": "api/comments/api/comments/{id:guid}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "DevConnect.BLL.DTOs.CommentDTOs.UpdateCommentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Comments"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.CommentEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCommentEndpoints\u003Eb__0_3",
+    "RelativePath": "api/comments/api/comments/{id:guid}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Comments"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.CommentEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCommentEndpoints\u003Eb__0_5",
+    "RelativePath": "api/comments/api/comments/{postId:guid}/has-commented/{userId:guid}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Comments"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.CommentEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCommentEndpoints\u003Eb__0_0",
+    "RelativePath": "api/comments/api/comments/post/{postId:guid}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Comments"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.CommentEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCommentEndpoints\u003Eb__0_4",
+    "RelativePath": "api/comments/api/comments/post/{postId:guid}/most-liked",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Comments"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.FollowEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapFollowEndpoints\u003Eb__0_0",
+    "RelativePath": "api/follow/api/follow/{followerId:guid}",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "followerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "DevConnect.BLL.DTOs.FollowDTOs.CreateFollowDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Follow"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.FollowEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapFollowEndpoints\u003Eb__0_1",
+    "RelativePath": "api/follow/api/follows/{followerId:guid}/{followingId:guid}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "followerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "followingId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Follow"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.FollowEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapFollowEndpoints\u003Eb__0_4",
+    "RelativePath": "api/follow/api/follows/{followerId:guid}/is-following/{followingId:guid}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "followerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "followingId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Follow"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.FollowEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapFollowEndpoints\u003Eb__0_2",
+    "RelativePath": "api/follow/api/follows/{userId:guid}/followers",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Follow"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.FollowEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapFollowEndpoints\u003Eb__0_3",
+    "RelativePath": "api/follow/api/follows/{userId:guid}/following",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Follow"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.LikeEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapLikeEndpoints\u003Eb__0_0",
+    "RelativePath": "api/likes/api/likes",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DevConnect.BLL.DTOs.LikeDTOs.CreateLikeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Like"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.LikeEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapLikeEndpoints\u003Eb__0_1",
+    "RelativePath": "api/likes/api/likes/{likeId:guid}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "likeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Like"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.LikeEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapLikeEndpoints\u003Eb__0_4",
+    "RelativePath": "api/likes/api/likes/{postId:guid}/user/{userId:guid}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Like"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.LikeEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapLikeEndpoints\u003Eb__0_3",
+    "RelativePath": "api/likes/api/likes/count/{postId:guid}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Like"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.LikeEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapLikeEndpoints\u003Eb__0_2",
+    "RelativePath": "api/likes/api/likes/post/{postId:guid}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Like"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.MessageEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapMessageEndpoints\u003Eb__0_2",
+    "RelativePath": "api/messages/api/messages/{messageId:guid}/read",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "messageId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Message"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.MessageEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapMessageEndpoints\u003Eb__0_0",
+    "RelativePath": "api/messages/api/messages/{senderId:guid}",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "senderId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "DevConnect.BLL.DTOs.MessageDTOs.CreateMessageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Message"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.MessageEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapMessageEndpoints\u003Eb__0_1",
+    "RelativePath": "api/messages/api/messages/conversation/{user1Id:guid}/{user2Id:guid}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user1Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "user2Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Message"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.MessageEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapMessageEndpoints\u003Eb__0_3",
+    "RelativePath": "api/messages/api/messages/latest/{conversationId:guid}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "conversationId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Message"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.MessageEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapMessageEndpoints\u003Eb__0_4",
+    "RelativePath": "api/messages/api/messages/unread/{userId:guid}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Message"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.NotificationEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapNotificationEndpoints\u003Eb__0_0",
+    "RelativePath": "api/notifications/api/notifications",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DevConnect.BLL.DTOs.NotificationDTOs.CreateNotificationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Notifications"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.NotificationEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapNotificationEndpoints\u003Eb__0_2",
+    "RelativePath": "api/notifications/api/notifications/{id}/read",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Notifications"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.NotificationEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapNotificationEndpoints\u003Eb__0_1",
+    "RelativePath": "api/notifications/api/notifications/{userId:guid}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Notifications"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.NotificationEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapNotificationEndpoints\u003Eb__0_4",
+    "RelativePath": "api/notifications/api/notifications/{userId}/mark-all-read",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Notifications"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.NotificationEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapNotificationEndpoints\u003Eb__0_5",
+    "RelativePath": "api/notifications/api/notifications/unread-count/{userId}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Notifications"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.NotificationEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapNotificationEndpoints\u003Eb__0_3",
+    "RelativePath": "api/notifications/api/notifications/unread/{userId:guid}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Notifications"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.PostEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPostEndpoints\u003Eb__0_0",
+    "RelativePath": "api/posts/api/posts",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Posts"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.PostEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPostEndpoints\u003Eb__0_2",
+    "RelativePath": "api/posts/api/posts",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postDto",
+        "Type": "DevConnect.BLL.DTOs.PostDTOs.CreatePostDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Posts"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.PostEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPostEndpoints\u003Eb__0_1",
+    "RelativePath": "api/posts/api/posts/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Posts"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.PostEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPostEndpoints\u003Eb__0_3",
+    "RelativePath": "api/posts/api/posts/{id}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "postDto",
+        "Type": "DevConnect.BLL.DTOs.PostDTOs.UpdatePostDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Posts"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.PostEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPostEndpoints\u003Eb__0_4",
+    "RelativePath": "api/posts/api/posts/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Posts"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.PostEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPostEndpoints\u003Eb__0_7",
+    "RelativePath": "api/posts/api/posts/comments/{postId}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Posts"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.PostEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPostEndpoints\u003Eb__0_8",
+    "RelativePath": "api/posts/api/posts/search",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Posts"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.PostEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPostEndpoints\u003Eb__0_5",
+    "RelativePath": "api/posts/api/users/{userId}/posts",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Posts"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.PostEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPostEndpoints\u003Eb__0_6",
+    "RelativePath": "api/posts/api/users/feed/{userId}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Posts"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.ProjectEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapProjectEndpoints\u003Eb__0_0",
+    "RelativePath": "api/projects/api/projects",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Projects"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.ProjectEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapProjectEndpoints\u003Eb__0_2",
+    "RelativePath": "api/projects/api/projects",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "projectDto",
+        "Type": "DevConnect.BLL.DTOs.ProjectDTOs.CreateProjectDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Projects"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.ProjectEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapProjectEndpoints\u003Eb__0_1",
+    "RelativePath": "api/projects/api/projects/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Projects"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.ProjectEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapProjectEndpoints\u003Eb__0_3",
+    "RelativePath": "api/projects/api/projects/{id}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "projectDto",
+        "Type": "DevConnect.BLL.DTOs.ProjectDTOs.UpdateProjectDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Projects"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.ProjectEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapProjectEndpoints\u003Eb__0_4",
+    "RelativePath": "api/projects/api/projects/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Projects"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.ProjectEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapProjectEndpoints\u003Eb__0_6",
+    "RelativePath": "api/projects/api/projects/recent/{fromDate}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fromDate",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Projects"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.ProjectEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapProjectEndpoints\u003Eb__0_7",
+    "RelativePath": "api/projects/api/projects/team/{projectId}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "projectId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Projects"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.ProjectEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapProjectEndpoints\u003Eb__0_8",
+    "RelativePath": "api/projects/api/projects/trending",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Projects"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.ProjectEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapProjectEndpoints\u003Eb__0_5",
+    "RelativePath": "api/projects/api/projects/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Projects"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.SkillEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSkillEndpoints\u003Eb__0_0",
+    "RelativePath": "api/skills/api/skills",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Skills"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.SkillEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSkillEndpoints\u003Eb__0_2",
+    "RelativePath": "api/skills/api/skills",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DevConnect.BLL.DTOs.SkillDTOs.CreateSkillDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Skills"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.SkillEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSkillEndpoints\u003Eb__0_3",
+    "RelativePath": "api/skills/api/skills/{id:guid}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "DevConnect.BLL.DTOs.SkillDTOs.UpdateSkillDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Skills"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.SkillEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSkillEndpoints\u003Eb__0_4",
+    "RelativePath": "api/skills/api/skills/{id:guid}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Skills"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.SkillEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSkillEndpoints\u003Eb__0_1",
+    "RelativePath": "api/skills/api/skills/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Skills"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.SkillEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSkillEndpoints\u003Eb__0_6",
+    "RelativePath": "api/skills/api/skills/{skillName}/users",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "skillName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Skills"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.SkillEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSkillEndpoints\u003Eb__0_7",
+    "RelativePath": "api/skills/api/skills/check/{userId:guid}/{skillName}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "skillName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Skills"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.SkillEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSkillEndpoints\u003Eb__0_5",
+    "RelativePath": "api/skills/api/skills/popular/{count:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "count",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Skills"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUserEndpoints\u003Eb__0_0",
+    "RelativePath": "api/users/api/users",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Users"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUserEndpoints\u003Eb__0_1",
+    "RelativePath": "api/users/api/users/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Users"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUserEndpoints\u003Eb__0_2",
+    "RelativePath": "api/users/api/users/{id}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "userDto",
+        "Type": "DevConnect.BLL.DTOs.UserDTOs.UpdateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Users"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUserEndpoints\u003Eb__0_8",
+    "RelativePath": "api/users/api/users/is-taken/{username}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Users"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUserEndpoints\u003Eb__0_5",
+    "RelativePath": "api/users/api/users/skill/{skillName}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "skillName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Users"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUserEndpoints\u003Eb__0_6",
+    "RelativePath": "api/users/api/users/top-rated/{count:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "count",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Users"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUserEndpoints\u003Eb__0_4",
+    "RelativePath": "api/users/api/users/username/{username}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Users"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUserEndpoints\u003Eb__0_7",
+    "RelativePath": "api/users/api/users/with-projects",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Users"
+    ]
+  },
+  {
+    "ContainingType": "DevConnect.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUserEndpoints\u003Eb__0_3",
+    "RelativePath": "api/users/email/{email}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Users"
+    ]
+  }
+]
